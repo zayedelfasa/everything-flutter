@@ -1,0 +1,1 @@
+enum StatusState { loading, data, error }

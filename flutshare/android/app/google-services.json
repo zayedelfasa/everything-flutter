@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "462087205489",
+    "firebase_url": "https://flutshare.firebaseio.com",
+    "project_id": "flutshare",
+    "storage_bucket": "flutshare.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462087205489:android:9cad3a3c447188f8",
+        "android_client_info": {
+          "package_name": "com.example.flutshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462087205489-afopfndqgnc5sif7uuprf80joohl2h9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClo-KQjh3s9ip2YqIveGTbydssM3eMd9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462087205489-afopfndqgnc5sif7uuprf80joohl2h9n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
