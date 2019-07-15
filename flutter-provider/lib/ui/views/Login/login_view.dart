@@ -20,6 +20,7 @@ class _LoginViewState extends State<LoginView> {
       builder: (context, model, child) => Scaffold(
             backgroundColor: backgroundColor,
             body: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 LoginHeader(
                   validationMessage: model.errorMessage,

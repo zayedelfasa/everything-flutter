@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:provider_example/models/Comment.dart';
 import 'package:provider_example/models/Post.dart';
 import 'package:provider_example/models/User.dart';
 
@@ -19,7 +20,7 @@ class Api {
   Future<List<Post>> getPostsForUser(int userId) async {
     var posts = List<Post>();
     // Get user posts for id
-    var response = await client.get('$endpoint/posts?userId=$userId');
+    var response = await client.get('$endpoint/posts?$userId');
 
     // parse into List
     var parsed = json.decode(response.body) as List<dynamic>;
@@ -30,5 +31,22 @@ class Api {
     }
 
     return posts;
+  }
+
+  Future<List<Comment>> getCommentsForPost(int postId) async {
+    var comments = List<Comment>();
+
+    // Get comments for post
+    var response = await client.get('$endpoint/comments?postId=$postId');
+
+    // Parse into List
+    var parsed = json.decode(response.body) as List<dynamic>;
+    
+    // Loop and convert each item to a Comment
+    for (var comment in parsed) {
+      comments.add(Comment.fromJson(comment));
+    }
+
+    return comments;
   }
 }

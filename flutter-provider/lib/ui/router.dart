@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider_example/models/Post.dart';
+import 'package:provider_example/ui/views/DetailPosts/post_view.dart';
 import 'package:provider_example/ui/views/Home/home_view.dart';
 import 'package:provider_example/ui/views/Login/login_view.dart';
 
@@ -11,6 +13,10 @@ class Router {
         return MaterialPageRoute(builder: (_) => HomeView());
       case 'login':
         return MaterialPageRoute(builder: (_) => LoginView());
+      case 'post':
+        var post = settings.arguments as Post;
+        return MaterialPageRoute(builder: (_) => PostView(post: post));
+        break;
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

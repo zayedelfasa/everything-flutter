@@ -19,7 +19,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return BaseView<HomeModel>(
-      onModelReady: (model) => model.getPosts(Provider.of(context)),
+      onModelReady: (model) => model.getPosts(Provider.of<User>(context).id),
       builder: (context, model, widget) => Scaffold(
             backgroundColor: backgroundColor,
             body: model.state == ViewState.Busy
@@ -54,8 +54,8 @@ class _HomeViewState extends State<HomeView> {
      itemBuilder: (context, index) => PostListItem(
       post: posts[index],
       onTap: () {
-        print("Klik me to go navigate post");
-        // Navigator.pushNamed(context, '/post', arguments: posts[index]);
+        // print("Klik me to go navigate post");
+        Navigator.pushNamed(context, 'post', arguments: posts[index]);
       },
      )
   );
