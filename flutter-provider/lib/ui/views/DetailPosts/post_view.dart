@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:provider_example/models/Comment.dart';
 import 'package:provider_example/models/Post.dart';
 import 'package:provider_example/ui/shared/app_colors.dart' as prefix0;
+import 'package:provider_example/ui/views/DetailPosts/LikeButtonModel.dart';
 import 'package:provider_example/ui/views/DetailPosts/comments_model.dart';
 import 'package:provider_example/ui/views/base_view.dart';
 
@@ -34,6 +35,7 @@ class PostView extends StatelessWidget {
             ),
             UIHelper.verticalSpaceMedium(),
             Text(post.body),
+            LikeButton(postId: post.id),
             Comments(postId: post.id)
           ],
         ),
@@ -80,6 +82,29 @@ class CommentItem extends StatelessWidget {
           Text(comment.body),
         ],
       ),
+    );
+  }
+}
+
+class LikeButton extends StatelessWidget {
+  final int postId;
+  LikeButton({@required this.postId});
+
+  @override
+  Widget build(BuildContext context) {
+    return BaseView<LikeButtonModel>(
+      builder: (context, model, child) => Row(
+              children: <Widget>[
+                Text('Likes ${model.postLike(postId)}'),
+                MaterialButton(
+                  color: Colors.white,
+                  child: Icon(Icons.thumb_up),
+                  onPressed: () {
+                    model.increaseLikes(postId);
+                  },
+                )
+              ],
+            ),
     );
   }
 }
