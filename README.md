@@ -11,9 +11,9 @@ Repositori digunakan untuk belajar penggunaan beberapa widget dan design pattern
 
 ## 1. Flutshare <Application>
 Sebuah aplikasi yang saya kembangkan pada Hackathon Global Flutter yang salah satunya diadakan di senggigi-lombok. Aplikasi ini sebagai protoype untuk komunitas flutter yang memiliki beberapa fitur sebagai berikut : 
-    1. Flutter News
-    2. Post dan Menampilkan event Flutter
-    3. Join event dan chatting untuk mengetahui informasi terbaru dari sebuah event.
+1. Flutter News
+2. Post dan Menampilkan event Flutter
+3. Join event dan chatting untuk mengetahui informasi terbaru dari sebuah event.
 
 Untuk melihat source code silahkan lihat [di sini](https://github.com/zayedelfasa/everything-flutter/tree/master/flutshare)
 
@@ -21,6 +21,7 @@ Untuk melihat source code silahkan lihat [di sini](https://github.com/zayedelfas
 Sebuah design pattern BLoC (Bussiness Logic of Component) yang direkomendasikan langsung oleh Google. Tetapi yang perlu diketahui bahwa Google hanya merekomendasikan bukan untuk memaksa para developer untuk menggunakan design pattern ini karena masih ada beberapa design pattern lain yang dapat digunakan dalam pengembangan aplikasi flutter. 
 
 Untuk melihat contoh Flutter BLoC dapat dilihar [di sini](https://github.com/zayedelfasa/everything-flutter/tree/master/flutter-bloc)
+
 Beberapa contoh BloC dapat dilihat [di sini](https://felangel.github.io/bloc/#/)
 
 ## 3. Flutter MVP <Design Pattern>
