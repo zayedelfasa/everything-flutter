@@ -42,7 +42,7 @@ class _HomeViewState extends State<HomeView> {
                         child: Text('Here are all your posts', style: subHeaderStyle),
                       ),
                       UIHelper.verticalSpaceSmall(),
-                      Expanded(child: getPostsUi(model.post),)
+                      Expanded(child: getPostsUi(model.posts),)
                     ],
                   ),
           ),
@@ -85,7 +85,11 @@ class PostListItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(post.title, style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16.0),),
+            Text(
+              '${post.title} - ${post.likes.toString()}',
+              maxLines: 2,
+              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16.0),
+            ),
             Text(post.body, maxLines: 2, overflow: TextOverflow.ellipsis)
           ],
         ),

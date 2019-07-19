@@ -20,6 +20,7 @@ class PostView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("post id is ${post.id}");
     return Scaffold(
       backgroundColor: prefix0.backgroundColor,
       body: Padding(
@@ -95,7 +96,8 @@ class LikeButton extends StatelessWidget {
     return BaseView<LikeButtonModel>(
       builder: (context, model, child) => Row(
               children: <Widget>[
-                Text('Likes ${model.postLike(postId)}'),
+                Text('Likes ${model.postLikes(postId)} '),
+                // Text('Likes '),
                 MaterialButton(
                   color: Colors.white,
                   child: Icon(Icons.thumb_up),

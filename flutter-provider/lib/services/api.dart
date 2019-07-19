@@ -20,7 +20,7 @@ class Api {
   Future<List<Post>> getPostsForUser(int userId) async {
     var posts = List<Post>();
     // Get user posts for id
-    var response = await client.get('$endpoint/posts?$userId');
+    var response = await client.get('$endpoint/posts?userId=$userId');
 
     // parse into List
     var parsed = json.decode(response.body) as List<dynamic>;
