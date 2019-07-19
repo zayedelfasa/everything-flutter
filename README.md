@@ -27,6 +27,8 @@ Beberapa contoh BloC dapat dilihat [di sini](https://felangel.github.io/bloc/#/)
 ## 3. Flutter MVP (Design Pattern)
 Sebuah design pattern yang pertama kali saya kenal ketika flutter masih versi < 1.0 Design pattern ini mirip seperti design pattern ketika menggunakan Java pada umumnya ketika mengembangkan aplikasi menggunakan Java di Android Studio.
 
+Untuk melihat contoh penggunaan MVP dapat dilihat [di sini](https://github.com/zayedelfasa/everything-flutter/tree/master/flutter-mvp)
+
 ## 4. Flutter Provider (Design Pattern)
 Sebuah design pattern yang menjadi alternative ketika mengembangkan aplikasi menggunakan flutter. Provider ini tetap pada prinsipnya dimana bussiness logic tetap terpisah dengan View Logic pada aplikasi. Untuk beberapa orang yang menggunakan provider ini memisahkan antara Bussiness Logic, View Logic, dan API (otentifikasi API dan bussiness API) untuk membantu para programmer agar kode terlihat rapi.
 
