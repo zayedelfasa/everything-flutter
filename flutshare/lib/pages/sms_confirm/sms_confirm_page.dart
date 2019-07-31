@@ -4,7 +4,7 @@ import 'package:flutshare/pages/tab/tab_page.dart';
 import 'package:flutshare/styles/default_colors.dart';
 import 'package:flutshare/styles/default_styles.dart';
 import 'package:flutshare/utils/link_route.dart';
-import 'package:flutshare/utils/local_storage.dart';
+// import 'package:flutshare/utils/local_storage.dart';
 
 class SmsPage extends StatefulWidget {
   final String phoneNumber;
@@ -103,7 +103,7 @@ class _SmsPageState extends State<SmsPage> {
     if(_formKey.currentState.validate()) {
       _formKey.currentState.save();
       if(bloc.checkConfirmNumber(confirmNumber)) {
-        new SaveLocalStorage().saveLocalUserNumberPhone(widget.phoneNumber);
+        // new SaveLocalStorage().saveLocalUserNumberPhone(widget.phoneNumber);
         Navigator.of(context).pushReplacementNamed(LinkRoute.TabPage);
       }
     }
